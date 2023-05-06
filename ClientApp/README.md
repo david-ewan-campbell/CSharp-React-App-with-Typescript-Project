@@ -1,3 +1,46 @@
+## C#/.NET React Basic Counter App - Migrating to Typescript!
+
+Basic steps on how to set up and use C# with a .NET React template and migrate the Javascript to Typescript using tutorials including https://kenny-designs.github.io/articles/2022-06-05-csharp-react-typescript-tutorial.html
+
+To install typescript with npm:
+`npm install -g typescript`
+
+To check file location of installed Typescript:
+`npm list -g typescript`
+
+To check Typescript version:
+`tsc -v`
+
+C# can be installed as an extension on VScode
+
+.NET
+Instructions .NET on installing on a Mac/in VS here:
+`https://learn.microsoft.com/en-us/dotnet/core/install/macos`
+
+To launch a React C# app:
+`dotnet new react -o NameOfYourApp`
+
+And to launch:
+`dotnet run`
+
+1. Created empty C# with React project - when trying to git add the project it threw a fatal error:
+`fatal: CRLF would be replaced by LF in .gitignore`
+Researched the issue and it relates to a conflict in the way different platforms handle new lines - tell git to handle mixed line breaks:
+`git config --global core.safecrlf false`
+
+Different approaches to handling types of line-break at:
+`https://gist.github.com/NateWeiler/df202280ce8cc38e9f00dbc17708fab2`
+
+2. Initialised a tsconfig.json file in the ClientApp folder. Changed Home.js file in components folder to a typescript file & changed js class component into typescript functional component as recommended in tutorial.
+
+3. Tried to dotnet run the App but ran into a error with a .NET certificate not being trusted. To trust the HTTP certificate on my Mac I ran the command:
+`dotnet dev-certs https --trust`
+To get command line list of dev-cert tools:
+`dotnet dev-certs https --help`
+
+Info on this available at: https://learn.microsoft.com/en-gb/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos
+
+--------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

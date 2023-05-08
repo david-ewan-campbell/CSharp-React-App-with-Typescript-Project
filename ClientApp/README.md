@@ -1,8 +1,10 @@
-## C#/.NET React Basic Counter App - Migrating to Typescript!
+## Ongoing project to learn to build a C#/.NET React Basic Counter App & Migrating Javascript to Typescript!
+
+SOme information gleaned up to now in this project...
 
 Basic steps on how to set up and use C# with a .NET React template and migrate the Javascript to Typescript using tutorials including https://kenny-designs.github.io/articles/2022-06-05-csharp-react-typescript-tutorial.html
 
-To install typescript with npm:
+Install typescript with npm:
 `npm install -g typescript`
 
 To check file location of installed Typescript:
@@ -11,18 +13,24 @@ To check file location of installed Typescript:
 To check Typescript version:
 `tsc -v`
 
-C# can be installed as an extension on VScode
+C# can be installed as an extension on VScode but found it better installing Typescript with npm... 
+`npm install -g typescript`
 
 .NET
 Instructions .NET on installing on a Mac/in VS here:
 `https://learn.microsoft.com/en-us/dotnet/core/install/macos`
 
-To launch a React C# app:
+To create a React C# app:
 `dotnet new react -o NameOfYourApp`
 
-And to launch:
+To launch:
 `dotnet run`
 
+(CTRL C to close the running App in the server.)
+
+- Launching the app, the terminal will give you a web address to open and then the App will load and update there.
+
+STEPS
 1. Created empty C# with React project - when trying to git add the project it threw a fatal error:
 `fatal: CRLF would be replaced by LF in .gitignore`
 Researched the issue and it relates to a conflict in the way different platforms handle new lines - tell git to handle mixed line breaks:
@@ -40,12 +48,16 @@ To get command line list of dev-cert tools:
 
 Info on this available at: https://learn.microsoft.com/en-gb/aspnet/core/security/enforcing-ssl?view=aspnetcore-7.0&tabs=visual-studio%2Clinux-ubuntu#trust-the-aspnet-core-https-development-certificate-on-windows-and-macos
 
+4. Continue to change js components to tsx (Typescript) and interesting to follow error reports that are very clear and specific in showing what properties 'do not exist' and are no longer functional as js class constructor props passed on a state but as properties passed as parameters.
+
+5. When launching the App, compiling errors & the code that is causing errors are clearly shown in the terminal which I found very useful. PROJECT ONGOING>>>>
+
+
 --------------------------------------------------
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
